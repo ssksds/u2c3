@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movies</title>
+    <style>
+       input{
+        width: 200px;
+
+    }
+    #movies{
+        height: 200px;
+        width: 206px;
+        border: 1px solid black;
+        overflow: scroll;
+    }
+
+
+ 
+#container {
+  width: 100%;
+  margin: auto;
+  margin-top: 90px;
+  background-color: black;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  gap: 10px;
+  text-align: justify;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+#header_input {
+  margin: 30px;
+}
+
+#div1 {
+  /* width: 50%; */
+   /* margin-left: 10px; */
+  padding: 10px 0 10px 5px;
+} 
+img {
+  width: 100%;
+  height: 100%;
+  border: 1px solid silver;
+}
+#div2 {
+  /* width: 60%; */
+  /* margin-left: 10px; */
+  padding: 10px; 
+ 
+}
+    </style>
+  </head>
+  <body>
+    <div id="navbar">
+      <h1>Movie List</h1>
+      <h1 id="wallet"></h1>
+      <!-- Display the wallet amount here inside h1 tag with id as "wallet". Note only amount, no extra text. Like 500 not Rs 500 -->
+    </div>
+  
+   <input  oninput="debounce(main,600)" type="text" id="query">
+    <!-- input box for searching movies with id as "search" -->
+        <!-- No button should be there for searching movies, it should search with input  -->
+      <div id="movies"></div>
+      <div id="container"></div>
+  
+  </body>
+</html>
+<script
+< src="scripts\movies.js"></script>
