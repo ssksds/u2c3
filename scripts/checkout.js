@@ -26,3 +26,18 @@ selectedMovies.forEach(element => {
 
     movies_div.append(box2);
 });
+
+
+function confirm(){
+    let seat=document.getElementById("number_of_seats").value;
+   let total= seat*100;
+   if(purse<total){
+       alert("Insufficient Balance!");
+       seat.innerText=null;
+   }else{
+       alert("Booking successfull!");
+       let updatedPurse=purse-total;
+       document.getElementById("wallet").innerText=updatedPurse;
+       localStorage.setItem("amount",JSON.stringify(updatedPurse));
+   }
+}
